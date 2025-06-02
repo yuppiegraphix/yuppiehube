@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN & AirtelTigo Bundle Purchase</title>
+    <link rel="stylesheet" href="styles.css">
+	<title>Slide Bar</title>
+	    <script src="https://js.paystack.co/v1/inline.js"></script>
+		 <script src="scripts.js"></script>
+  <style>
+    
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #007bff;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    /* Close Button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      color: #333;
+    }
+
+    /* Media Query for Mobile */
+    @media screen and (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<body>
+    <div></div>
+</body>
+<script>
+    $('div').html("<div>1</div>");
+</script>
+
+<body>
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="openSidebar()">☰</div>
+
+  <!-- Sidebar -->, 
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">×</span>
+	<button id="closeSidebar">&times;</button>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <script>
+    function openSidebar() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+</body>
+ 
+</head>
+<body>
+    <h1>Buy MTN & AirtelTigo Bundles</h1>
+    <form id="bundleForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="network">Choose Network:</label>
+        <select id="network" name="network" onchange="updateBundles()">
+            <option value="MTN">MTN</option>
+            <option value="AirtelTigo">AirtelTigo</option>
+        </select>
+        
+        <label for="bundle">Select Bundle:</label>
+        <select id="bundle" name="bundle">
+            <!-- Dynamically populated based on network selection -->
+        </select>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <button type="button" onclick="payWithPaystack()">Pay Now</button>
+    </form>
+	<script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<style>
+/* General Reset */
+body, h1, form, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background: linear-gradient(to right, #FFCC00, #004AAD); /* MTN Yellow & AirtelTigo Blue */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    flex-direction: column;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements inside the form */
+}
+
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #003366; /* MTN Dark Blue for contrast */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #E30613; /* AirtelTigo Red */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #FFCC00; /* MTN Yellow on hover */
+    transform: scale(1.05);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+</style>
+</html>
